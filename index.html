@@ -1,65 +1,127 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+       
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 1.2;
         }
 
         h1 {
-            font-size: 28px;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 1.2;
         }
 
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #555;
+        .full-screen-section {
+            height: 100vh;
         }
 
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Hello, I'm Teerawut</h1>
-        <p>
-            Welcome to my portfolio website. I'm a Teerawut or call me "arm" with a passion for Web development. 
-            I enjoy learn for build something and develop my skill, and I'm always eager to learn and explore new technologies and 
-            opportunities. This website is a showcase of some of my work and experiences.
-        </p>
 
-        <h2>About Me</h2>
-        <p>
-            "I'm a web developer who enjoys watching others create websites in various styles. I aspire to do the same and contribute to the web development community. I find inspiration in different web designs and am constantly learning and improving my skills to turn those ideas into reality."
-        </p>
+    <nav class="bg-gray-700">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                            aria-current="page"> <img class="h-8 w-auto"
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                alt="Teerawutp.Devfolio"></a>
 
-        <h2>Skills</h2>
-        <p>
-            - HTML<br>
-            - Javascript<br>
-        </p>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 
+                            <a href="#aboutme"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About</a>
+                            <a href="#portfolio"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Portfolio</a>
+                            <a href="#contact"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+                        </div>
+                    </div>
+                </div>
 
-        <h2>Contact</h2>
-        <p>
-            Feel free to reach out to me at [armshare.it@gmail.com].
-        </p>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+                <a href="#aboutme"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About</a>
+                <a href="#portfolio"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Portfolio</a>
+                <a href="#contact"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ส่วนของเนื้อหาจะอยู่ที่นี่ -->
+
+    <div class="container mx-auto">
+        <div class="home full-screen-section bg-slate-400">
+            <!-- Profile content here -->
+            <h1>My Portfolio <i class="fas fa-user"></i></h1>
+            <p>This is a paragraph about myself.</p>
+        </div>
+        <div id="aboutme" class="full-screen-section bg-amber-300	">About</div>
+        <div id="portfolio" class=" full-screen-section bg-amber-400	">Portfolio</div>
+        <div id="contact"class="full-screen-section bg-amber-400	">Contact
+
+        </div>
     </div>
+
 </body>
+
 </html>
