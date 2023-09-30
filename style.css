@@ -1,0 +1,10 @@
+#scrollTopBtn {
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#scrollTopBtn.visible {
+    opacity: 1;
+    visibility: visible;
+}
